@@ -1,0 +1,13 @@
+header
+{
+    padding: 50px;
+    margin: 50px;
+    height: 100px;
+    width: 95%;
+    text-align: center;
+}
+body
+{
+background-image: url("img3.jpg");
+background-size: cover;
+}

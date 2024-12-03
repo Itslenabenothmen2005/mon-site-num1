@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>atelier9</title>
+    <link rel="stylesheet" href="tp9.css" />
+  </head>
+  <body onload="reglement()">
+    <from name="f">
+      <fieldset>
+        <legend><b id="a1">INSCRIPTION</b></legend>
+        <table border="0">
+          <tr>
+            <td></td>
+          </tr>
+          <tr>
+            <td><h4 id="a2">S'INSCRIRE....</h4></td>
+          </tr>
+          <tr>
+            <td><h5 class="b">Nom et Prénom :</h5></td>
+            <td>
+              <input
+                type="text"
+                id="np"
+                placeholder=" enter votre nom et prénom"
+                onfocus="colorer(this.id)"
+                onblur="convertir()"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><h5 class="b">Télépone:</h5></td>
+            <td>
+              <input type="text"id="telephone"placeholder=" enter votre numero de téléphone"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><h5 class="b">Date de naissance : </h5></td>
+            <td><input type="date" id="date" /></td>
+          </tr>
+          <tr>
+            <td><h5 class="b">sexe : </h5></td>
+            <td>
+              <h5 class="s"><input type="radio"id="femme"name="rad"value="femme" />Femme</h5>
+            </td>
+            <td>
+              <h5 class="s"><input  type="radio" id="homme" name="rad" value="homme" />Homme
+              </h5>
+            </td>
+          </tr>
+          <tr> </tr>
+          <tr>    </tr>
+          <tr><td class="b" id="per" colspan="4" ></td></tr>
+          <tr>
+            <td><h5 class="b">Adresse Email :</h5></td>
+            <td>
+              <input type="email" id="email" placeholder="Saisir votre email" />
+            </td>
+          </tr>
+          <tr>
+            <td> <h5 class="b">Mot de passe :</h5></td>
+            <td><input type="password" id="mdp" placeholder="mot de passe"/></td>
+          </tr>
+          <td> <h5 class="b">Confirmer :</h5></td>
+          <td><input type="password" id="vmdp" placeholder="Confirmer votre mot de passe"/></td>
+        </tr>
+        <tr><td><h5 class="b"> Niveau de programmation Web :</h5></td>
+            <td><input type="range" id="Niveau"/></td>
+        </tr>
+        <tr>
+            <td><h5 class="b">Nombre d'années d'expériance :</h5></td>
+            <td><input type="text" id="nae" placeholder="0"/></td>
+        </tr>
+        <tr>
+            <td><h5 class="b">Centre d'intéret :</h5></td>
+            <td><h5 class="s"><input type="checkbox" name="cbox" value="cbox"id="c1"/>Musique</h5></td>
+            <td>  </td>
+            <td><h5 class="s"><input type="checkbox" name="cbox" value="cbox" id="c2"/>Théatre</h5></td>
+            <td>  </td>
+            <td><h5 class="s"><input type="checkbox" name="cbox" value="cbox" id="c3"/>Sport</h5></td>
+            <td>  </td>
+            <td><h5 class="s"><input type="checkbox" name="cbox" value="cbox" id="c4"/>Cinema</h5></td>
+        </tr>
+        <td> <h5 class="b">Module de formation :</h5></td>
+        <td><select name="list" size="4" id="list">
+            <option value="python">PYTHON</option>
+                <option value="html">HTML</option>
+                <option value="css" >CSS</option>
+                <option value="javascript">JAVASCRIPT</option>
+            </select>
+        </td>
+        <tr>
+        <td><h5 class="b">Couleur préférée :</h5></td>
+        <td><input type="color" value="color" id="coul"/></td>
+        </tr>
+        <tr align="center">
+            <td colspan="20">
+              <input
+                type="button"
+                value="s'inscrit"
+                onclick="verifier()"
+              />
+        </table>
+        </fieldset>
+    </from>
+    <script>
+    function reglement(){
+        alert("Pour s'inscrit,vous devez remplir tout le formulaire");
+    }
+    function votreEmail(x){
+      x=document.getElementById("email")
+      document.getElementById("per").innerHTML="votre email est: "+x;
+ 
+    }
+    function verifier(){
+        np= document.getElementById("np").value;
+        e= document.getElementById("email").value;
+        t= document.getElementById("telephone").value;
+        mdp= document.getElementById("mdp").value;
+        vmdp= document.getElementById("vmdp").value;
+        op= document.getElementById("list").value;
+        index=list.selectedIndex;
+        if(np==""||nom(np))
+        alert("ekteb nom w prénom mt3k yhdik")
+        if((isNaN(t)==true)||(t.lengeth!=8)||parseInt(t)!=t)
+        {alert("num tlf rahou mtkwen mn 8 chiffre"); return false;}
+        if((document.getElementById('homme').checked==false)&&(document.getElementById('femme').checked==false))
+        {alert("verifi sexe mt3k"); return false;}
+        if(!(document.getElementById('date').value>="2003-01-01")&&(document.getElementById('date').value>="2005-12-31"))
+        {alert("jm3t 2003 w 2004 w 2005 houma eli ynjmoi ysjlou "); return false;}
+        p1=e.indexOf("@");
+        p2=e.lastIndexOf("@");
+        serveur=e.substr(p1+1);
+        if(p1==-1 || p1!=p2 && serveur!="gmail.com")
+        {alert("zid thbet fl gmail mt3k "); return false;}
+        if(isNaN(mdp)==true||(mdp.lengeth<6)||(mdp.lengeth>12)||parseInt(mdp)!=mdp)
+          {alert("l mot d passe rahou mabin 6 w 12 chiffres"); return false;}
+        if(mdp!=vmdp)
+        {alert("zid thbet fl mot de passe mt3k"); return false;}
+        if(document.getElementById('niveau').value<15)
+        {alert("niveau mt3k lzm a9aal 7aja 15"); return false;}
+        if(document.getElementById('niveau').value<3)
+        {alert("chouf 3la9al lzmk 3 anné d'experiance"); return false;}
+        if(index<1)
+        {alert("e5tar language"); return false;}
+        if((document.getElementById('c1').checked==false)&&(document.getElementById('c2').checked==false)&&(document.getElementById('c3').checked==false)&&(document.getElementById('c4').checked==false))
+        {alert("e5tar 3la9al hobbie"); return false;}
+        var x=document.getElementById('coul').value;
+        if (x=="#000000")
+        {alert("e5tar lounm lmoufdhl"); return false;}
+    }
+    function nom(x){
+        i=0;
+        while(((x.charAt(i)>="a")&&(x.charAt(i)<="z"))||((x.charAt(i)>="A")&&(x.charAt(i)<="Z"))&&(x.charAt(i)>=" "))
+        {
+            i++;
+        }
+        return(i==x.lengeth)&&(x.lengeth=!0);
+    }
+    function colorer(x) {
+        document.getElementById(x).style.background = "yellow";
+      }
+      function convertir() {
+        x = document.getElementById("np");
+        x.value = x.value.toUpperCase();
+      }
+    </script>
+  </body>
+</html>

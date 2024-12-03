@@ -1,0 +1,40 @@
+body
+{
+background-image: url("project1.jpg");
+background-size: cover;
+}
+header
+{
+    padding: 50px;
+    margin: 50px;
+    height: 100px;
+    width: 95%;
+    text-align: center;
+}
+nav ul
+{
+    list-style-type: inline-block;
+    margin: 4px;
+}
+nav li
+{
+    display: inline-block;
+    height: 40px;
+    width: 300px;
+    padding-top: 20px;
+    background-image: linear-gradient(to right,#bdc3c7,#19547b);
+    font-family: arial;
+    font-weight: bold;
+    font-size: large;
+    color: black;
+    text-align: center;
+    border-right-width: 15px;
+    border-right-style: solid;
+    border-color:white;
+    border-radius: 20px;
+    padding: 45px;
+    margin: 45px;
+
+}
+
+

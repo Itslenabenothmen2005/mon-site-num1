@@ -1,0 +1,50 @@
+.i
+{
+color: blueviolet;
+}
+#ii
+{
+    color: steelblue;
+}
+
+header
+{
+    height:90px;
+    width:95%
+    padding:10px;
+    margin:10px;
+} 
+article
+{
+    background:rgb(206, 231, 248);  
+    height:250px;
+    width:58%;
+    border:black solid 1px;
+    margin:10px;
+    padding:10px;
+    position:absolute;
+    top:70px;
+    bottom:100px;
+}
+aside
+{
+    height:200px;
+    width:300px;
+    margin:10px;
+    padding:10px;
+    top:40px;
+    bottom:00px;
+    position:absolute;
+    left: 1000px;
+}
+
+footer
+{
+    background-color: antiquewhite;
+    height:110px;
+    width: 90%;
+    padding:10px;
+    margin: 10px;
+    position: absolute;
+    top: 410px;
+}

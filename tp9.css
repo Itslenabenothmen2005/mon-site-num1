@@ -1,0 +1,27 @@
+body
+{
+    background: linear-gradient(cornflowerBlue,rgb(149, 176, 199));
+}
+.b
+{
+    color: red;
+}
+#a1
+{
+    color: midnightblue;
+}
+#a2
+{
+    background-color: gray;
+    width: auto;
+}
+#c
+{
+    width: 3px;
+}
+.s
+{
+
+    color: rgb(132, 0, 255); 
+}
+
